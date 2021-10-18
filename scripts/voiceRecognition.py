@@ -8,6 +8,7 @@ with sr.Microphone() as source:
     print("Speak:")                                                                                   
     audio = r.listen(source, timeout = 3, phrase_time_limit=5) 
 
+
 try:
     print("You said " + r.recognize_google(audio))
 except sr.UnknownValueError:
